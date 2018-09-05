@@ -1,0 +1,47 @@
+# vim: sta sts=2 sw=2 et ai si ff=unix eol fenc=utf-8 nobomb ft=yaml
+---
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v1.4.0
+  hooks:
+    - id: check-added-large-files
+      args:
+        - --maxkb 10000
+    - id: check-byte-order-marker
+    - id: check-case-conflict
+    - id: check-merge-conflict
+    - id: check-yaml
+      args:
+        - --allow-multiple-documents
+    - id: detect-aws-credentials
+    - id: detect-private-key
+    - id: end-of-file-fixer
+      stages:
+        - commit
+    - id: forbid-new-submodules
+    - id: mixed-line-ending
+      exclude_types:
+        - gitignore
+    - id: name-tests-test
+      args:
+        - --django
+    - id: no-commit-to-branch
+      args:
+        - -b master
+        - -b develop
+    - id: sort-simple-yaml
+    - id: trailing-whitespace
+- repo: https://github.com/Lucas-C/pre-commit-hooks
+  rev: v1.1.5
+  hooks:
+    - id: forbid-crlf
+    - id: forbid-tabs
+- repo: https://github.com/adrienverge/yamllint
+  rev: v1.11.1
+  hooks:
+    - id: yamllint
+- repo: https://github.com/jorisroovers/gitlint
+  rev: v0.10.0
+  hooks:
+    - id: gitlint
+      stages:
+        - commit-msg
