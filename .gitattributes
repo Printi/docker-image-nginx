@@ -1,0 +1,49 @@
+# vim: sta sts=4 sw=4 et ai si ff=unix eol fenc=utf-8 nobomb ft=conf
+# Auto detect text files and perform LF normalization
+# http://davidlaing.com/2012/09/19/customise-your-gitattributes-to-become-a-git-ninja/
+
+* text=auto eol=lf
+*.adoc text
+*.bat text eol=crlf
+*.csproj text eol=crlf
+*.csv text
+*.dbproj text eol=crlf
+*.doc diff=astextplain
+*.DOC diff=astextplain
+*.docx diff=astextplain
+*.DOCX diff=astextplain
+*.dot diff=astextplain
+*.DOT diff=astextplain
+*.eps binary
+*.filters text eol=crlf
+*.fsproj text eol=crlf
+*.gif binary
+*.ico binary
+*.jpeg binary
+*.jpg binary
+*.lsproj text eol=crlf
+*.md text
+*.modelproj text eol=crlf
+*.mustache text
+*.pdf diff=astextplain
+*.PDF diff=astextplain
+*.png binary
+*.props text eol=crlf
+*.rtf diff=astextplain
+*.RTF diff=astextplain
+*.sln text eol=crlf
+*.sqlproj text eol=crlf
+*.sql text
+*.svg binary
+*.tab text
+*.textile text
+*.tif binary
+*.tiff binary
+*.tsv text
+*.vbproj text eol=crlf
+*.vcproj text eol=crlf
+*.vcxitems text eol=crlf
+*.vcxproj text eol=crlf
+*.wixproj text eol=crlf
+*.wmaproj text eol=crlf
+*.xproj text eol=crlf
